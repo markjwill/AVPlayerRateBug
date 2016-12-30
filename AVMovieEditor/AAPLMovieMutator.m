@@ -9,6 +9,7 @@
 @import AVFoundation;
 @import CoreMedia;
 #import "AAPLMovieMutator.h"
+#import <Appkit/Appkit.h>
 
 static NSString* const movieEditorPasteboardType = @"com.example.apple-samplecode.AVMovieEditor";
 

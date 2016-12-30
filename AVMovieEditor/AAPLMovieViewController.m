@@ -73,22 +73,11 @@
 }
 
 #pragma mark - Right click NSMEnu to message Cut, Copy, and Paste
-
 - (void)rightMouseDown:(nonnull NSEvent *)theEvent {
-	NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Movie Style Editing"];
-
-	// If we have not selected a time range then we can not copy or cut - only paste.
-	if (CMTIME_COMPARE_INLINE(self.selectedTimeRange.start, ==, kCMTimeZero) && CMTIME_COMPARE_INLINE(self.selectedTimeRange.duration, ==, kCMTimeZero)) {
-		[menu insertItemWithTitle:@"Paste" action:@selector(pasteMovie) keyEquivalent:@"" atIndex:0];
-	} else {
-		[menu insertItemWithTitle:@"Cut" action:@selector(cutMovie) keyEquivalent:@"" atIndex:0];
-		[menu insertItemWithTitle:@"Copy" action:@selector(copyMovie) keyEquivalent:@"" atIndex:1];
-	}
-	
-	menu.delegate = self;
-	
-	[NSMenu popUpContextMenu:menu withEvent:theEvent forView:self.view];
+    NSLog(@"RequestedPlaybackRate:%f",self.playerView.player.rate);
+    NSLog(@"ActualPlaybackRate:%f",CMTimebaseGetRate(self.playerView.player.currentItem.timebase));
 }
+
 
 - (void)cutMovie {
 	// Cut the movie and handle the error if necessary.
