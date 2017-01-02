@@ -27,4 +27,4 @@ Continuing to press the "L" key will cycle through speeds 2x, 5x, 10x, 30x & 60x
 
 ## Motivation
 
-My motivation for creating this project is that I am trying to create playback speed indicator for a custom movie editing UI.  I need my user to be able to playback video footage at high speed and quickly and easily see what the speed is.  I've never created a project like this nor officially submitted a bug report anywhere, any feedback, workarounds or solutions would be greatly appreciated.
+My motivation for creating this project is that I am trying to create playback speed indicator for a custom movie editing UI.  I need my user to be able to playback video footage at high speed and quickly and easily see what the speed is.  An official bug report has been submitted with Apple.  I will update any response from them.  I've never created a project like this nor officially submitted a bug report anywhere, any feedback, workarounds or solutions would be greatly appreciated.
